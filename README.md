@@ -11,6 +11,7 @@ Topics covered include:
 	-Python
 	-Django
 
+
 mod2: php calculator, php file sharer
 mod3: news site that uses a MySQL database
 mod4: python introduction
