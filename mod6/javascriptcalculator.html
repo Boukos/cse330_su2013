@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>calculator</title>
+    
+    <script type="text/javascript">
+        function add() {
+            a = Number(document.calc.num1.value);
+            b = Number(document.calc.num2.value);
+            answer = a + b;
+            document.calc.ans.value = answer;
+        }
+        function subtract() {
+            a = Number(document.calc.num1.value);
+            b = Number(document.calc.num2.value);
+            answer = a - b;
+            document.calc.ans.value = answer;
+        }
+        function multiply() {
+            a = Number(document.calc.num1.value);
+            b = Number(document.calc.num2.value);
+            answer = a * b;
+            document.calc.ans.value = answer;
+        }
+        function divide() {
+            a = Number(document.calc.num1.value);
+            b = Number(document.calc.num2.value);
+            if (b !=0 ) {
+            answer = Math.round(a/b*1000)/1000;
+            document.calc.ans.value = answer;
+            }
+            else {
+                answer = "cannot divide by 0";
+                document.calc.ans.value = answer;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name=calc>
+        1st number: <input type="text" name=num1><br>
+        2nd number: <input type="text" name=num2><br>
+        Answer: <input type="text" name=ans><br>
+    
+  
+    <input type="button" value="add" onclick="javascript:add();">
+    <input type="button" value="subtract" onclick="javascript:subtract();">
+    <input type="button" value="multiply" onclick="javascript:multiply();">
+    <input type="button" value="divide" onclick="javascript:divide();"> 
+        
+    </form>
+    
+</body>
+</html>
+
