@@ -1,0 +1,54 @@
+<?php session_start(); ?>
+<!DOCTYPE html>
+<head>
+<title></title>
+</head>
+<body>
+
+<form enctype="multipart/form-data" action="uploader.php" method="POST">
+	<p>
+		<input type="hidden" name="MAX_FILE_SIZE" value="20000000" />
+		<label for="uploadfile_input">Choose a file to upload:</label><input name="uploadedfile" type="file" id="uploadfile_input" />
+	</p>
+	<p>
+		<input type="submit" value="Upload File" />
+	</p>
+</form>
+
+<?php	
+$username = $_SESSION['name'];
+//$path = "/filesharing/". $username. "/";
+$path = "/home/ubuntu/public_html/filesharingsite/".$username."/";
+//echo $path."firstpath";
+
+$results = array();
+$dir_handle = @opendir($path);
+
+while($file = readdir($dir_handle)){
+
+echo "inwhile ";	
+	if($file != "." &&  $file != ".."){
+		$results[] = $file;
+	}
+}
+closedir($dir_handle);
+$_SESSION['files'] = $results;
+$folder = $_SESSION['files'];
+
+for($i=0; $i<sizeof($folder); $i++){
+	$file = $folder[$i];	
+	//print("<a href=\"/filesharing/".$username."/".$file."/"\">$file</a>"."<input type="submit" name="delete$i"  value="delete"></br>");
+	print ("<a href=\"/ubuntu/public_html/filesharingsite/readfile.php/\">$file</a>"."<input type='submit' name='delete$i' value='delete'></br>");
+
+//	print("<a href=\"/~ubuntu/public_html/".$username."/".$file."/\">$file</a>"."<input type="submit" name="delete$i" value="delete"></br>");
+}
+?>
+<br>
+<br>
+<form name="logout"  action="logout.php" method="POST">
+	<input type="submit" name="logout" value="logout" />
+</form>
+</body>
+</html>
+
+
