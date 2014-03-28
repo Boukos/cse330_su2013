@@ -1,4 +1,4 @@
-CSE 330: Rapid Prototyping and Creative Design course at Washington University in St. Louis
+CSE 330: Rapid Prototype Development and Creative Programming course at Washington University in St. Louis.
 
 Topics covered include:
 
