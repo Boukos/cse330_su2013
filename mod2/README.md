@@ -3,7 +3,7 @@ individual portion:
 	-php calculator
 
 group portion:
-	-file sharer (created using php) which gives authenticated users the ability to upload and view files
+	-file sharer (created using php) gives authenticated users the ability to upload and view files
 	
 
 
