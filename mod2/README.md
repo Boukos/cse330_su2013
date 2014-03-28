@@ -1,9 +1,9 @@
 mod2
 individual portion:
-	-php calculator
+	-create a calculator using php
 
 group portion:
-	-file sharer (created using php) gives authenticated users the ability to upload and view files
+	-create a file sharer (created using php) gives authenticated users the ability to upload and view files
 	
 
 
